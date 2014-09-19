@@ -8,7 +8,7 @@ package com.practicalunittesting.chp06.matchers;
  */
 public class Book {
 	private final String title;
-	private String language;
+	private String language = "english";
 
 	public Book(String title) {
 		this.title = title;

@@ -1,8 +1,10 @@
 package com.practicalunittesting.chp06.matchers;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import static com.practicalunittesting.chp06.matchers.BookAssert.assertThat;
@@ -39,6 +41,9 @@ public class BookFestTest {
 	@Test
 	public void combinedMatchersExample() {
 		book = new Book(TITLE);
+        Book anotherBook = new Book("another");
+        this.scienceFictionBooks = new ArrayList<Book>();
+        this.scienceFictionBooks.add(anotherBook);
 		assertThat(book)
 				.hasTitle(TITLE)
 				.isNotIn(scienceFictionBooks)
